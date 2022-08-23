@@ -1,23 +1,9 @@
-import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import express, { Application, Request, Response } from 'express';
 
-export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
-  let response: APIGatewayProxyResult;
-  try {
-    response = {
-      statusCode: 200,
-      body: JSON.stringify({
-        message: 'hello world',
-      }),
-    };
-  } catch (err) {
-    console.log(err);
-    response = {
-      statusCode: 500,
-      body: JSON.stringify({
-        message: 'some error happened',
-      }),
-    };
-  }
+export const app: Application = express();
 
-  return response;
-};
+app.use(express.json());
+
+app.get('/api/hello', (req: Request, res: Response) => {
+  res.json({ message: 'Hello World!' });
+});
