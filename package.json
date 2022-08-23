@@ -7,15 +7,15 @@
   "author": "SAM CLI",
   "license": "MIT",
   "scripts": {
-    "unit": "jest",
+    "tsc": "tsc",
+    "dev": "nodemon",
     "eslint": "eslint './src/**/*.{ts,tsx}'",
     "eslint:fix": "eslint --fix './src/**/*.{ts,tsx}'",
     "format": "prettier --check ./src",
     "format:fix": "prettier --write ./src",
     "lint": "npm-run-all eslint format",
     "lint:fix": "npm-run-all eslint:fix format:fix",
-    "compile": "tsc",
-    "test": "npm run compile && npm run unit"
+    "jest": "jest"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
@@ -30,6 +30,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.0",
+    "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "ts-node": "^10.4.0",
