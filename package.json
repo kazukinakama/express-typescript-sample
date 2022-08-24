@@ -13,7 +13,7 @@
     "format:fix": "prettier --write ./src",
     "lint": "npm-run-all eslint format",
     "lint:fix": "npm-run-all eslint:fix format:fix",
-    "jest": "jest"
+    "test": "jest"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
@@ -31,6 +31,7 @@
     "nodemon": "^2.0.19",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
+    "supertest": "^6.2.4",
     "ts-node": "^10.4.0",
     "typescript": "^4.5.5"
   },

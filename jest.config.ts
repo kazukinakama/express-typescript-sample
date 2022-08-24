@@ -6,5 +6,5 @@ module.exports = {
   collectCoverage: false,
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
-  testMatch: ['**/tests/unit/*.test.ts'],
+  testMatch: ['**/tests/*.test.ts'],
 };
